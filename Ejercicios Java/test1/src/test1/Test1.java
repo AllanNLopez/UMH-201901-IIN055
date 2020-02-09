@@ -25,10 +25,10 @@ public class Test1 {
         numeroEntero = objScanner.nextInt(); //leer dato en pantalla
         System.out.print("Ingrese un numero decimal... ");
         numeroDecimal = objScanner.nextDouble();
-        System.out.print("Ingrese un numero extenso... ");
-        numeroExtenso = objScanner.nextLong();
         System.out.print("Ingrese un texto... ");
         cadenaCaracteres = objScanner.nextLine();
+        System.out.print("Ingrese un numero extenso... ");         
+        numeroExtenso = objScanner.nextLong();
         
         //Escribir variables
         System.out.println(" -------------- imprimiendo resultados  -------------------  ");
