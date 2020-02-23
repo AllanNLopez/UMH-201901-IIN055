@@ -3,17 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package despacho; 
+package newpackage;
+
 /**
  *
  * @author MI-PC
  */
-public class Despacho {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) { 
-    }
+public class prueba {
     
 }
