@@ -29,38 +29,41 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblNombre = new javax.swing.JLabel();
-        txtNombre = new javax.swing.JTextField();
-        btnGuardar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        txtIdentidad = new javax.swing.JTextField();
+        lblDolares = new javax.swing.JLabel();
+        txtDolares = new javax.swing.JTextField();
+        btnConvertir = new javax.swing.JButton();
+        lblLempiras = new javax.swing.JLabel();
+        txtLempiras = new javax.swing.JTextField();
+        cmbMonedaOrigen = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblNombre.setText("Nombre Completo: ");
+        lblDolares.setText("Divisa origen: ");
 
-        txtNombre.setText("Ingrese su nombre completo");
-        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+        txtDolares.setText("Ingrese su nombre completo");
+        txtDolares.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombreActionPerformed(evt);
+                txtDolaresActionPerformed(evt);
             }
         });
 
-        btnGuardar.setText("Guardar");
-        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+        btnConvertir.setText("Guardar");
+        btnConvertir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarActionPerformed(evt);
+                btnConvertirActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Numero de identidad: ");
+        lblLempiras.setText("Numero de identidad: ");
 
-        txtIdentidad.setText("0000-0000-00000");
-        txtIdentidad.addActionListener(new java.awt.event.ActionListener() {
+        txtLempiras.setText("0000-0000-00000");
+        txtLempiras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIdentidadActionPerformed(evt);
+                txtLempirasActionPerformed(evt);
             }
         });
+
+        cmbMonedaOrigen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dolares", "Euros", "Lempiras", "Quetzales" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -69,18 +72,19 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnGuardar)
+                    .addComponent(btnConvertir)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblNombre)
-                                .addGap(55, 55, 55))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(41, 41, 41)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblLempiras)
+                                .addGap(41, 41, 41))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(lblDolares, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(55, 55, 55)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-                            .addComponent(txtIdentidad))))
+                            .addComponent(txtDolares, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+                            .addComponent(txtLempiras)
+                            .addComponent(cmbMonedaOrigen, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -88,34 +92,37 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNombre)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblDolares)
+                    .addComponent(txtDolares, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(txtIdentidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
-                .addComponent(btnGuardar)
+                    .addComponent(lblLempiras)
+                    .addComponent(txtLempiras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cmbMonedaOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
+                .addComponent(btnConvertir)
                 .addGap(23, 23, 23))
         );
 
-        txtNombre.getAccessibleContext().setAccessibleName("txtNombre");
-        btnGuardar.getAccessibleContext().setAccessibleName("Guardar");
+        txtDolares.getAccessibleContext().setAccessibleName("txtNombre");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+    private void txtDolaresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDolaresActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreActionPerformed
+    }//GEN-LAST:event_txtDolaresActionPerformed
 
-    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        exit();
-    }//GEN-LAST:event_btnGuardarActionPerformed
+    private void btnConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertirActionPerformed
+        double usd = Double.parseDouble(txtDolares.getText());
+        double lps = usd*24.6;
+        txtLempiras.setText(""+lps);
+    }//GEN-LAST:event_btnConvertirActionPerformed
 
-    private void txtIdentidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdentidadActionPerformed
+    private void txtLempirasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLempirasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtIdentidadActionPerformed
+    }//GEN-LAST:event_txtLempirasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,10 +160,11 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnGuardar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lblNombre;
-    private javax.swing.JTextField txtIdentidad;
-    private javax.swing.JTextField txtNombre;
+    private javax.swing.JButton btnConvertir;
+    private javax.swing.JComboBox<String> cmbMonedaOrigen;
+    private javax.swing.JLabel lblDolares;
+    private javax.swing.JLabel lblLempiras;
+    private javax.swing.JTextField txtDolares;
+    private javax.swing.JTextField txtLempiras;
     // End of variables declaration//GEN-END:variables
 }
